@@ -27,5 +27,5 @@ $ make clean
 ```
 ## Remark
 
-You can also profile both kernels to compare performances between the two approachs.
+You can also profile both kernels to compare performance between the two approachs.
 
