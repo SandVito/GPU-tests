@@ -3,13 +3,14 @@
 Some tests on Nvidia GPUs.
 
 ## Summary
-This code uses two types of 3D textures. Both of them contains unsigned short (16 bits) values.
-The first one will output normalized float. Output values are interpolated by the hardware.
-The second one will output unsigned short values. We don't use the hardware interpolation as we 
-perform it by reading the 8 needed pixel values.
+This code uses two types of 3D textures. 
 
-Then we compare both results. The software interpolation is more precise so we can evaluate
-the loss of precision when using hardware interpolation.
+Both of them contain unsigned short (16 bits) values.
+  * The first one will output normalized float. Output values are interpolated by the hardware.
+  * The second one will output unsigned short values. We don't use the hardware interpolation : we "manually" compute the interpolation by reading the 8 needed texels.
+
+Then we compare both results. 
+The software interpolation is more precise so we can evaluate the loss of precision when using hardware interpolation.
 
 ## Supported languages
   * C
